@@ -1,3 +1,6 @@
+#Code for comparing animal length, mass and age to whisker length.
+
+
 setwd("C:/Juv_vib")
 dir()
 all.summary <- read.csv("animal.summary2.csv", header = T)
