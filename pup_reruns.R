@@ -19,7 +19,7 @@ xyplot(d15N~whisk.pctle|id,type="b",pch=19,cex=0.5,
 
 
 
-
+#####
 xyplot(dC/dN~total.length,data=tmp,group=pup,type="b",pch=19,cex=0.5,
        panel=function(x,y,...){
          panel.xyplot(x,y,...)
