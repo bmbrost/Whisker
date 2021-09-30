@@ -24,3 +24,6 @@ plot(vibrissae.length~animal.mass, data = all.summary)
 abline(-58,1.56)
 dev.off()
 
+#t-test to see if whisker lengths are longer for juveniles than pups
+t.test(vibrissae.length ~ class, data = all.summary)
+

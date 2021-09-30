@@ -38,3 +38,10 @@ all3 = all2[all2$long.short == "long",]
 names(all3); dim(all3)
 unique(all3$id)
 summary(all3)
+
+#subset small vibrissae and calculate means for d13C and d15N
+all4 = all2[all2$long.short == "short",]
+d13C_mean <- aggregate(d13C ~ id, data = all4, mean)
+d13C_mean
+d15N_mean <- aggregate(d15N ~ id, data = all4, mean)
+d15N_mean
