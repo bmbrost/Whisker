@@ -2,7 +2,7 @@
 
 setwd("C:/Juv_vib")
 dir()
-all.summary <- read.csv("animal.summary2.csv", header = T)
+all.summary <- read.csv("animal.summary.csv", header = T)
 head(all.summary)
 
 #Animal length and vibrissae length comparison
@@ -27,3 +27,17 @@ dev.off()
 #t-test to see if whisker lengths are longer for juveniles than pups
 t.test(vibrissae.length ~ class, data = all.summary)
 
+
+# fit linear regressions and reportresults on the graphs (y=mx+b),p_value,adjusted R2,etc.
+# for Animal length and vibrissae length comparison
+animalLength.mod <- lm(animal.length ~ vibrissae.length, data=all.summary)
+print(animalLength.mod)
+summary(animalLength.mod)
+# for Animal age and vibrissae length comparison
+animalage.mod <- lm(age ~ vibrissae.length, data=all.summary)
+print(animalage.mod)
+summary(animalage.mod)
+# for Animal mass and vibrissae length comparison
+animalmass.mod <- lm(animal.mass ~ vibrissae.length, data=all.summary)
+print(animalmass.mod)
+summary(animalmass.mod)
