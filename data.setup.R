@@ -2,12 +2,13 @@ library(mgcv)
 library(gratia)
 library(rootSolve)
 library(numDeriv)
+library(tidyverse)
 
 #Script for setting up the vibrissae data for gam modelling
 # hopefully only run once
 
 setwd("C:/Juv_vib")
-allorig  = read.table("alldata.csv",header = T, sep ="," )
+allorig  = read.table("all.csv",header = T, sep ="," )
 #make a copy of the original ; leave as is 
 all = allorig
 
