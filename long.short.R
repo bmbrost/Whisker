@@ -1,6 +1,11 @@
 ###
 ### Fit GAM with adaptive smooth
 ###
+library(tidyverse)
+library(mgcv)
+
+idx <- which(all2$id=="26.2")
+all2$id[idx] <- "26"
 
 # Nest data
 out <- all2 %>% filter(id%in%c("26","T3","T11","T7")) %>%
